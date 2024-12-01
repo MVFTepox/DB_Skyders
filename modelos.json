@@ -1,0 +1,122 @@
+{
+    "_id": "64b3f2e8e2b8c54d110f4b93",
+    "first_name": "Juan",
+    "last_name": "Pérez",
+    "birth_date": "1990-05-15T00:00:00.000Z",
+    "phone": "+5218112345678",
+    "email": "juan.perez@email.com",
+    "password": "hashed_password_here",
+    "roles": "cliente",
+    "client": {
+        "purchase_history": [
+            {
+                "purchase_id": "64b3f2e8e2b8c54d110f4c01"
+            }
+        ],
+        "preferences": "Conciertos, festivales"
+    },
+    "organizer": {
+        "events": [
+            "64b3f2e8e2b8c54d110f4c02",
+            "64b3f2e8e2b8c54d110f4c03"
+        ]
+    },
+    "administrator": {
+        "special_permissions": false
+    }
+}
+
+
+
+{
+    "_id": "64b3f2e8e2b8c54d110f4b93",
+    "first_name": "Juan",
+    "last_name": "Pérez",
+    "birth_date": "1990-05-15T00:00:00.000Z",
+    "phone": "+5218112345678",
+    "email": "juan.perez@email.com",
+    "password": "hashed_password_here",
+    "roles": "organizer",
+    "client": {
+        "purchase_history": [],
+        "preferences": "Conciertos, festivales"
+    },
+    "organizer": {
+        "events": [
+            "64b3f2e8e2b8c54d110f4c02",
+            "64b3f2e8e2b8c54d110f4c03"
+        ]
+    },
+    "administrator": {
+        "special_permissions": false
+    }
+}
+
+{
+    "_id": "64b3f2e8e2b8c54d110f4b93",
+    "first_name": "Juan",
+    "last_name": "Pérez",
+    "birth_date": "1990-05-15T00:00:00.000Z",
+    "phone": "+5218112345678",
+    "email": "juan.perez@email.com",
+    "password": "hashed_password_here",
+    "roles": "administrador",
+    "client": {
+        "purchase_history": [],
+        "preferences": "Conciertos, festivales"
+    },
+    "organizer": {
+        "events": []
+    },
+    "administrator": {
+        "special_permissions": true
+    }
+}
+
+
+{
+    "_id": "64d3f2e8e2b8c54d110f4b91",
+    "name": "Concierto Rock 2024",
+    "description": "Un espectáculo inolvidable con las mejores bandas de rock.",
+    "organizer_id": "64b3f2e8e2b8c54d110f4b93",
+    "event_type": [
+        "Concierto",
+        "Festival"
+    ],
+    "total_seats": 500,
+    "seats_sold": 200,
+    "available_tickets": 300,
+    "ticket_price": 50,
+    "location": {
+        "venue": "Estadio Azteca",
+        "address": "Calzada de Tlalpan 3465, Ciudad de México"
+    },
+    "event_dates": {
+        "sales_start_date": "2024-01-01T00:00:00.000Z",
+        "sales_end_date": "2024-04-30T00:00:00.000Z",
+        "event_date": "2024-05-05T20:00:00.000Z",
+        "event_time": "20:00"
+    },
+    "likes": 128
+}
+
+{
+    "_id": "64e4f2e8e2b8c54d110f4c22",
+    "event_id": "64d3f2e8e2b8c54d110f4b91",
+    "comment": {
+        "user_id": "64b3f2e8e2b8c54d110f4b93",
+        "text": "¡Increíble evento! No puedo esperar para asistir.",
+        "user_name": "Juan Pérez"
+    },
+    "like": true
+}
+
+{
+    "_id": "64f4f2e8e2b8c54d110f4d01",
+    "user_id": "64b3f2e8e2b8c54d110f4b93",
+    "event_id": "64d3f2e8e2b8c54d110f4b91",
+    "purchase_date": "2024-11-19T14:30:00.000Z",
+    "ticket_quantity": 3,
+    "unit_price": 50,
+    "total_price": 150
+}
