@@ -26,7 +26,8 @@ const eventSchema = new mongoose.Schema({
     event_time: { type: String, required: true }
   },
   likes: { type: Number, default: 0 },
-  imgEvent: { type: String, required: true }
+  imgEvent: { type: String, required: true },
+  allowed: { type: Boolean, default: null },
 });
 
 module.exports = mongoose.model("Event", eventSchema);

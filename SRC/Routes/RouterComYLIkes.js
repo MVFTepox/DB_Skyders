@@ -5,7 +5,6 @@ const Event = require("../Models/Event");
 
 router.post("/comYLikes", async (req, res) => {
   const { event_id, user_id, comment, user_name, like } = req.body;
-
   try {
     // Crear un nuevo documento de comentarios y likes
     const newCommentAndLike = new comYLIkesSchema({
@@ -15,10 +14,8 @@ router.post("/comYLikes", async (req, res) => {
       user_name,
       like
     });
-
     // Guardar el comentario en la base de datos
     const savedCommentAndLike = await newCommentAndLike.save();
-
     // Incrementar likes en el evento si `like` es verdadero
     if (like) {
       const updatedEvent = await Event.findByIdAndUpdate(
@@ -26,12 +23,10 @@ router.post("/comYLikes", async (req, res) => {
         { $inc: { likes: 1 } },
         { new: true }
       );
-
       if (!updatedEvent) {
         return res.status(404).json({ message: "Event not found" });
       }
     }
-
     // Responder con el comentario guardado
     res.status(201).json(savedCommentAndLike);
   } catch (error) {
